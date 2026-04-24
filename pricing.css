@@ -1,0 +1,242 @@
+#overview .layers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.layer {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    position: relative;
+}
+
+.layer-num {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    opacity: 0.5;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.layer h3 {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.layer-name {
+    font-size: 0.9rem;
+    color: var(--fg);
+    margin-bottom: 1rem;
+}
+
+.layer p:last-child {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+#tiers .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.tier {
+    background: var(--border);
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.tier:hover {
+    border-color: var(--accent);
+}
+
+.tier.shield {
+    border-color: var(--accent);
+    position: relative;
+}
+
+.tier-header {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--bg);
+}
+
+.tier h3 {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.tier-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 0.5rem 0;
+}
+
+.tier-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--font-mono);
+}
+
+.tier-price span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.early-adopter {
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-top: 0.5rem;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: var(--bg);
+    padding: 0.25rem 1rem;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+.tier-features {
+    padding: 1.5rem;
+    list-style: none;
+}
+
+.tier-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--bg);
+    font-size: 0.9rem;
+}
+
+.tier-features li:last-child {
+    border-bottom: none;
+}
+
+.tier-for {
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.tier-addon {
+    padding: 0.5rem 1.5rem 1.5rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+#addons .addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.addon {
+    padding: 1.5rem;
+    background: var(--border);
+}
+
+.addon h3 {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.addon ul {
+    list-style: none;
+}
+
+.addon li {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--bg);
+}
+
+.addon li:last-child {
+    border-bottom: none;
+}
+
+#roi .multiplier-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.multiplier {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--border);
+}
+
+.multiplier.highlight {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+}
+
+.mult-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--font-mono);
+}
+
+.multiplier p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+#faq .faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+#cta {
+    text-align: center;
+}
+
+#cta p {
+    margin-bottom: 2rem;
+    color: var(--muted);
+}
+
+@media (max-width: 768px) {
+    #overview .layers,
+    #roi .multiplier-grid {
+        grid-template-columns: 1fr;
+    }
+}
